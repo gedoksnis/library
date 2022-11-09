@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Welcome to Library!
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'library/index.css'%}">
+{% endblock %}
+
+{% block content %}
+<h1>Sveiki atvykę į mano biblioteką</h1>
+<h4>Šiuo metu bibliotekoje yra:</h4>
+<ul>
+    <li>Knygų: {{num_books }}</li>
+    <li>Egzempliorių: {{ num_instances }}</li>
+    <li>Laisvų egzempliorių: {{ num_instances_available }}</li>
+    <li>Autorių: {{ num_authors }}</li>
+</ul>
+{% comment 'pavyzdys' %}
+
+{% endcomment %}
+
+<p>Jūs čia lankotės {{num_visits }}-ą kartą. </p>
+
+{# vienos eilutės pavyzdys #}
+{% endblock %}
